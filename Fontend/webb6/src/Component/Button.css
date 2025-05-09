@@ -1,0 +1,13 @@
+.button-wrapper-1 button {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    margin: 10px 0;
+    cursor: pointer;
+  }
+ 
+  button:hover {
+    opacity: 0.8;
+  }

@@ -1,0 +1,33 @@
+
+/* กำหนดสไตล์พื้นฐาน */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background-color: #d3d3d3; /* สีเทา */
+}
+
+/* เพิ่มคำสั่ง @tailwind หลังจากที่กำหนดสไตล์พื้นฐาน */
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+/* กำหนดสไตล์สำหรับคอมโพเนนต์ที่ต้องการ */
+.centered {
+  width: 60vw;  /* กำหนดความกว้างของพื้นที่สีขาว */
+  height: 100vh;  /* กำหนดความสูงให้เต็มหน้าจอ */
+  background-color: white; /* พื้นหลังสีขาว */
+  position: absolute; /* ใช้ absolute เพื่อให้จัดตำแหน่งได้ง่าย */
+  top: 0; /* ให้เริ่มต้นจากด้านบน */
+  left: 50%; /* ตั้งตำแหน่งเริ่มจากกลางหน้าจอในแนวนอน */
+  transform: translateX(-50%); /* จัดตำแหน่งกลางในแนวนอน */
+  display: flex;
+  flex-direction: column; /* เรียงจากบนลงล่าง */
+  justify-content: flex-start; /* ให้เริ่มจากด้านบน */
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  padding: 20px; /* เพิ่มพื้นที่จากขอบ */
+  z-index: 1; /* ทำให้พื้นหลังขาวทับพื้นที่อื่น */
+}

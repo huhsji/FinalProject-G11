@@ -1,0 +1,310 @@
+body.register-page {
+  /* ใช้สีพื้นหลังเดียวกับหน้า Promotion */
+  background-color: #334455;
+  background-image: linear-gradient(to bottom, #334455, #667788);
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  background-attachment: fixed;
+}
+
+.register-container {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 48px;
+  text-align: left;
+  color: #4a7a4e; /* สีเดียวกับหัวข้อใน Promotion */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-size: 32px;
+  text-align: left;
+  color: #e74c3c; /* สีเดียวกับส่วนลดใน Promotion */
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 30px;
+  color: #333;
+}
+
+p1{
+  font-size: 16px;
+  margin-top: 0px;
+  color: #333;
+}
+
+/* สไตล์สำหรับแสดงจำนวนคน */
+.capacity-display {
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.capacity-count {
+  background-color: #649b69;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 6px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* สไตล์สำหรับข้อความสำเร็จ */
+.success-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-message h2 {
+  color: #649b69;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.success-message p {
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* สไตล์สำหรับส่วนแสดง QR code */
+.qr-payment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.qr-payment-image {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.payment-details {
+  width: 100%;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.payment-details p {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+}
+
+.payment-note {
+  color: #e74c3c !important;
+  font-style: italic;
+  margin-top: 15px !important;
+}
+
+.redirect-message {
+  margin-top: 30px !important;
+  font-size: 16px !important;
+  color: #777 !important;
+}
+
+/* ปรับฟอร์มให้เป็น 2 คอลัมน์ */
+.register-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.form-group {
+  width: 47%; /* ให้แต่ละ input ใช้พื้นที่ครึ่งหนึ่งของฟอร์ม */
+  font-size: 15px;
+}
+
+.form-group.full-width {
+  width: 100%; /* ช่อง Address และ Checkbox ใช้เต็มแถว */
+  font-size: 15px;
+}
+
+label {
+  color: #4a7a4e; /* สีเดียวกับหัวข้อใน Promotion */
+  font-weight: bold;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 6px;
+  margin-top: 10px;
+  border: none;
+  border-bottom: 2px solid #4a7a4e; /* สีเดียวกับหัวข้อใน Promotion */
+  background: transparent;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-bottom: 2px solid #e74c3c; /* สีเดียวกับส่วนลดใน Promotion */
+}
+
+/* ปรับสไตล์ checkbox */
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.checkbox-group input {
+  width: auto; /* ให้ checkbox มีขนาดปกติ */
+  margin: 0;
+  margin-right: 10px;
+}
+
+.checkbox-group p, .checkbox-group label {
+  margin: 0; /* ลบระยะห่างของ p เพื่อให้ชิด checkbox */
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+button {
+  width: 200px;
+  background-color: #649b69; /* สีเดียวกับ capacity-info ใน Promotion */
+  color: white;
+  padding: 12px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #4a7a4e; /* สีเข้มขึ้นเมื่อ hover */
+}
+
+.extra-section {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* สไตล์ปุ่มเพิ่มเติม */
+.back-button {
+  background-color: #667788;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: auto;
+  margin-left: 10px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #334455;
+}
+
+/* สไตล์ส่วนหัวของฟอร์ม */
+.form-header {
+  background-color: #4a7a4e;
+  color: white;
+  padding: 15px;
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* การตอบสนองสำหรับอุปกรณ์มือถือ */
+@media screen and (max-width: 768px) {
+  .register-container {
+    padding: 25px;
+    margin: 20px;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 24px;
+  }
+  
+  button {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .checkbox-group input {
+    margin-left: 0;
+  }
+  
+  .success-message h2 {
+    font-size: 28px;
+  }
+  
+  .success-message p {
+    font-size: 16px;
+  }
+  
+  .qr-payment-container {
+    padding: 15px;
+  }
+  
+  .qr-payment-image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .payment-details {
+    padding: 0 10px;
+  }
+}

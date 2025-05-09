@@ -1,0 +1,281 @@
+.comments-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.comment-form {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+  gap: 8px;
+}
+
+.comment-input {
+  flex: 1;
+  border: 1px solid #dddfe2;
+  border-radius: 18px;
+  padding: 8px 12px;
+  font-size: 13px;
+  background-color: #f0f2f5;
+  margin-right: 5px;
+}
+
+.comment-input:focus {
+  outline: none;
+  background-color: #fff;
+  border-color: #bec3c9;
+}
+
+.comment-submit {
+  background-color: #38761d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.comment-submit:hover {
+  background-color: #2d5e17;
+}
+
+.comment-submit:disabled {
+  background-color: #a5a7a9;
+  cursor: not-allowed;
+}
+
+.comments-toggle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-align: left;
+  margin: 5px 0;
+  font-size: 13px;
+  color: #65676b;
+  font-weight: 500;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.comments-toggle:hover {
+  text-decoration: underline;
+}
+
+.comments-toggle::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2365676b'%3E%3Cpath d='M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.comment-list {
+  margin-top: 10px;
+}
+
+/* ส่วนของความคิดเห็นหลัก */
+.comment-thread {
+  margin-bottom: 20px;
+}
+
+.comment-item {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-bubble {
+  background-color: #f0f2f5;
+  border-radius: 18px;
+  padding: 8px 12px;
+  font-size: 13px;
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 2px;
+  word-wrap: break-word;
+}
+
+.comment-footer {
+  display: flex;
+  font-size: 12px;
+  color: #65676b;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.comment-username {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.comment-time {
+  color: #65676b;
+}
+
+.comment-actions {
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.comment-action {
+  font-size: 12px;
+  color: #65676b;
+  margin-right: 8px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-weight: 600;
+}
+
+.comment-action:hover {
+  text-decoration: underline;
+}
+
+.comments-loading {
+  text-align: center;
+  padding: 10px;
+  color: #65676b;
+  font-size: 13px;
+}
+
+.comments-error {
+  text-align: center;
+  padding: 10px;
+  color: #e41e3f;
+  font-size: 13px;
+}
+
+.comment-delete-btn {
+  color: #e41e3f;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-left: 5px;
+  font-size: 12px;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+.comment-delete-btn:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ส่วนของคำตอบ */
+.replies-container {
+  margin-left: 40px; /* ขยับเข้ามาเพื่อสร้าง nested effect */
+  position: relative;
+}
+
+.replies-container::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 0;
+  bottom: 15px;
+  width: 2px;
+  background-color: #dadde1;
+  border-radius: 1px;
+}
+
+.reply-item {
+  margin-top: 8px;
+  position: relative;
+}
+
+.reply-avatar {
+  width: 28px;
+  height: 28px;
+}
+
+.reply-bubble {
+  background-color: #f0f2f5;
+  font-size: 13px;
+}
+
+/* ฟอร์มตอบกลับ */
+.reply-form-container {
+  margin-left: 40px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.reply-form-container::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: -5px;
+  height: calc(100% + 10px);
+  width: 2px;
+  background-color: #dadde1;
+  border-radius: 1px;
+}
+
+.reply-form {
+  background-color: #f7f8fa;
+  border-radius: 12px;
+  padding: 8px;
+  margin-top: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.reply-input-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.reply-input {
+  margin-bottom: 8px;
+  background-color: #fff;
+}
+
+.reply-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 3px;
+}
+
+.reply-cancel-btn {
+  background-color: #e4e6eb;
+  color: #050505;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.reply-cancel-btn:hover {
+  background-color: #d8dadf;
+}
+
+.reply-submit {
+  min-width: 80px;
+}

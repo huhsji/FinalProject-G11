@@ -1,0 +1,14 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../assets/Forest4.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(8px); /* เบลอแค่รูป */
+    z-index: -1; /* ซ่อนไว้หลังเนื้อหา */
+}
